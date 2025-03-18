@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form Submission</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+    <div class="max-w-3xl mx-auto mt-10 p-6 bg-white shadow-md rounded-lg">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4">New Contact Form Submission</h2>
+
+        <div class="mb-4">
+            <p class="text-gray-700">
+                <strong class="font-semibold">Name:</strong>
+                <span><%= firstName %></span>
+            </p>
+        </div>
+
+        <div class="mb-4">
+            <p class="text-gray-700">
+                <strong class="font-semibold">Email:</strong>
+                <span><%= email %></span>
+            </p>
+        </div>
+
+        <div class="mb-4">
+            <p class="text-gray-700">
+                <strong class="font-semibold">Message:</strong>
+            </p>
+            <p class="text-gray-600 mt-2"><%= message %></p>
+        </div>
+
+        <div class="mt-6 border-t pt-4">
+            <p class="text-gray-600">Thank you for your inquiry. We will get back to you shortly!</p>
+            <p class="text-gray-600 mt-2">
+                Best Regards,<br>
+                <strong class="text-orange-500">Shree Krishan Education</strong>
+            </p>
+            <p class="mt-4">
+                <a href="<%= FRONTEND_URL %>" class="text-orange-500 hover:underline">Visit our website</a>
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

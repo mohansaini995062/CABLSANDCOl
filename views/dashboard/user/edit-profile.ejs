@@ -1,0 +1,38 @@
+<%- include('../../includes/header.ejs') %>
+<%- include('../../includes/Navbar.ejs') %>
+
+<div class="container mx-auto mt-10">
+  <div class="bg-white shadow-md rounded-lg p-6">
+    <h1 class="text-2xl font-bold mb-4">Edit Profile</h1>
+    <form id="editProfileForm" enctype="multipart/form-data" action="/user/edit-profile" method="POST">
+      <!-- Profile Picture Section -->
+      <div class="mb-4">
+        <label for="profilePicture" class="block text-gray-700 font-bold mb-2">Profile Picture:</label>
+        <input type="file" id="profilePicture" name="profilePicture" accept="image/*" class="border rounded-md p-2 w-full">
+      </div>
+
+      <!-- Username Section -->
+      <div class="mb-4">
+        <label for="username" class="block text-gray-700 font-bold mb-2">Username:</label>
+        <input type="text" id="username" name="username" value="<%= user.username %>" class="border rounded-md p-2 w-full">
+      </div>
+
+      <!-- Email Section -->
+      <div class="mb-4">
+        <label for="email" class="block text-gray-700 font-bold mb-2">Email:</label>
+        <input type="email" id="email" name="email" value="<%= user.email %>" class="border rounded-md p-2 w-full" disabled>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="flex justify-end">
+        <button type="submit" class="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700">
+          Save Changes
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<%- include('../../includes/footer.ejs') %>
+</body>
+</html>

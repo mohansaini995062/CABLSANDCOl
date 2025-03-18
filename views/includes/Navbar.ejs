@@ -1,0 +1,314 @@
+<ul class="nav nav-pills nav-fill">
+  <li class="nav-item">
+    <a class="nav-link " aria-current="page" href="#"><i style="color: #d0239c;" class="fa fa-phone"
+        aria-hidden="true"><span> +91-9784343068</span></i>
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link"
+      href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#sent?compose=DmwnWrRtsflkcnBCQmCQCgczwNsrBNJHTpJkbdhXxNHxWTCWTFQZjqzTvsZPmxSfRDZmXMjVzqXL"><i
+        style="color: #d0239c" class="fa fa-envelope" aria-hidden="true"></i>
+      <span style=" font-weight: 700; text-align: center;">cabhanwarlalsaini@gmail.com
+      </span></a>
+  </li>
+  <li class="nav-item">
+  </li>
+  <li class="nav-item">
+    <a class="nav-link gap-6" href="#" tabindex="-1" aria-disabled="true">
+      <a href="https://www.instagram.com/bls_and_co/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"
+          style="margin: 5px;"></i></a>
+      <a href="https://www.facebook.com/people/CA-Bhanwar-Lal-Saini/100010800551889/?mibextid=ZbWKwL" target="_blank"><i
+          class="fa fa-facebook" aria-hidden="true" style="margin: 5px;"></i></a>
+      <a href=""><i class="fa fa-youtube-play" aria-hidden="true" style="margin: 5px;"></i></a>
+      <a href="https://x.com/bls_and_9784" target="_blank"><i class="fa fa-twitter" aria-hidden="true"
+          style="margin: 5px; "></i></a>
+    </a>
+  </li>
+</ul>
+<nav class="flex items-center justify-around  sticky top-0 z-50 " style="background-color: black;">
+  <img src="/images/ca_logo.png" alt="logo" width="80px" />
+  <div class="md:block hidden">
+    <div class="flex items-center gap-5">
+      <div class="menu flex gap-10 font-medium text-lg">
+        <a href="/" class="hover:text-orange-500 text-decoration-none">Home</a>
+        <a href="/Services" class="hover:text-orange-500 text-decoration-none">Services</a>
+        <!-- <a href="/Regulatory" class="hover:text-orange-500">Regulatory</a> -->
+        <a href="/Knowledge_bank" class="hover:text-orange-500 text-decoration-none">Knowledge bank</a>
+        <a href="/Our_Team" class="hover:text-orange-500 text-decoration-none">Our Team</a>
+        <a href="/GST" class="hover:text-orange-500 text-decoration-none text-black">GST</a>
+        <a href="/Gallery" class="hover:text-orange-500 text-decoration-none">Gallery</a>
+        <!-- <a href="/Knowledge Base" class="hover:text-orange-500">Knowledge Base</a> -->
+        <!-- <a href="/Utilities" class="hover:text-orange-500">Utilities</a> -->
+        <a href="/Contact" class="hover:text-orange-500 text-decoration-none">Contact</a>
+      </div>
+      <div>
+        <% if(!token || token=="undefined" ){%>
+          <a href="/user/signup"
+            class="inline-block mr-10 bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 px-5 py-2 text-white font-bold text-xl hover:bg-orange-300  transition-all duration-500  rounded-3xl text-decoration-none    main">
+            Sign up
+          </a>
+          <a href="/user/login"
+            class="inline-block bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 px-5 py-2 text-white font-bold text-xl hover:bg-orange-300 transition-all duration-500  rounded-3xl text-decoration-none   main">
+            login
+          </a>
+          <%} else{ %>
+            <a href="/user/profile"
+              class="inline-block mr-10 bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 px-5 py-2 text-white font-bold text-xl hover:bg-orange-300 transition-all duration-500 rounded-3xl text-decoration-none   main">
+              Profile
+            </a>
+            <%}%>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="block md:hidden" id="mobile_navbar" style="color: white; border:  1px  dotted white; padding: 5px;">
+    <i class=" fa-solid fa-bars text-2xl cursor-pointer hover:to-blue-600" id="menu_icon"></i>
+    <div id="mobile_nav" style="color: white; background-color: black;">
+      <div class="flex justify-around items-center">
+        <img src="/images/ca_logo.png" alt="logo" width="80px" />
+        <i class="fa-solid fa-xmark text-2xl cursor-pointer hover:to-blue-600" id="close_icon"
+          style="margin-left: 100px;"></i>
+        <div id="clock">
+          <h5 id="date-time"></h5>
+        </div>
+      </div>
+      <div class="flex flex-col items-center gap-5">
+        <div class="menu flex flex-col gap-8 font-medium text-lg">
+          <a href="/" class="hover:text-orange-500 text-decoration-none">Home</a>
+          <a href="/Services" class="hover:text-orange-500 text-decoration-none">Services</a>
+          <!-- <a href="/Regulatory" class="hover:text-orange-500">Regulatory</a> -->
+          <a href="/Knowledge_bank" class="hover:text-orange-500 text-decoration-none">Knowledge bank</a>
+          <a href="/Our_Team" class="hover:text-orange-500 text-decoration-none">Our Team</a>
+          <a href="/GST" class="hover:text-orange-500 text-decoration-none">GST</a>
+          <a href="/Gallery" class="hover:text-orange-500 text-decoration-none">Gallery</a>
+          <!-- <a href="/Knowledge Base" class="hover:text-orange-500">Knowledge Base</a> -->
+          <!-- <a href="/Utilities" class="hover:text-orange-500">Utilities</a> -->
+          <a href="/Contact" class="hover:text-orange-500 text-decoration-none">Contact</a>
+        </div>
+        <div>
+          <% if(!token || token=="undefined" ){%>
+            <a href="/user/signup"
+              class="inline-block mr-10 bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 px-5 py-2 text-white font-bold text-xl hover:bg-orange-300 transition-all duration-500"
+              style="border-radius: 20px; text-decoration: none; margin-left: 25%;">
+              Sign up
+              <a href="/user/login"
+                class="inline-block bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 px-5 py-2 text-white font-bold text-xl hover:bg-orange-300 transition-all duration-500"
+                style="border-radius: 20px; text-decoration: none; margin-left: 25%; width: 50%; margin-top: 40px;">
+                log in
+              </a>
+            </a>
+            <%} else{ %>
+              <a href=" /user/profile"
+                class="inline-block mr-10 bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 px-5 py-2 text-white font-bold text-xl hover:bg-orange-300 transition-all duration-500 text-decoration-none rounded-3xl">
+                Profile
+              </a>
+              <%}%>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<nav class="navbar navbar-expand-lg navbar-dark min-h-screen w-full flex justify-center items-center"
+  style="color: black;">
+  <div class="container-fluid">
+    <button class="navbar-toggler" style="color: black; background-color: #d0239c;" type="button"
+      data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <img src="/images/B_2.jpg" alt="logo" width="80px">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="justify-content: center;">
+        <li class="nav-item dropdown">
+          <a class="nav-link " href="/" style="font-weight: 600; font-size: 15px; color: black;">
+            HOME
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+            style="font-weight: 600; font-size: 15px; color: black;">
+            INCOME TAX
+          </a>
+          <div class="dropdown-menu" style="font-size: 14px;">
+            <ul>
+              <li><a class="dropdown-item" href="#" style="color: black;">ANNUAL COMPLIANCE</a></li>
+              <li><a class="dropdown-item" href="#">Proprietorship Tax Return Filing</a></li>
+              <li><a class="dropdown-item" href="#">Partnership Firm Tax Return Filing</a></li>
+              <li><a class="dropdown-item" href="#">Private Limited Company Annual Filing & Compliance</a></li>
+              <li><a class="dropdown-item" href="#">LLP Annual Return Filing</a></li>
+              <li><a class="dropdown-item" href="#">Foreign Subsidiary Compliance</a></li>
+
+            </ul>
+            <ul>
+              <li><a class="dropdown-item" href="#" style="color: black;">INCOME TAX</a></li>
+              <li><a class="dropdown-item" href="#">ITR-1 Form Filing</a></li>
+              <li><a class="dropdown-item" href="#">ITR-2 Form Filing</a></li>
+              <li><a class="dropdown-item" href="#">ITR-3 Form Filing</a></li>
+              <li><a class="dropdown-item" href="#">ITR-4 Form Filing</a></li>
+              <li><a class="dropdown-item" href="#">ITR-5 Form Filing</a></li>
+            </ul>
+            <ul>
+              <li><a class="dropdown-item" href="#"></a></li>
+              <li><a class="dropdown-item" href="#">ITR-6 Form Filing</a></li>
+              <li><a class="dropdown-item" href="#">ITR-7 Form Filing</a></li>
+              <li><a class="dropdown-item" href="#">Income Tax Notice</a></li>
+              <li><a class="dropdown-item" href="#">TDS Return Filing</a></li>
+              <li><a class="dropdown-item" href="#">Form 16 Issuance</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+            style="font-weight: 600; font-size: 15px; color: black;">
+            COMPLIANCE
+          </a>
+          <div class="dropdown-menu" style="font-size: 14px;">
+            <ul>
+              <li><a class="dropdown-item" href="#" style="color: black;">Payroll Compliance</a></li>
+              <li><a class="dropdown-item" href="#">Payroll</a></li>
+              <li><a class="dropdown-item" href="#">PF Registration</a></li>
+              <li><a class="dropdown-item" href="#">PF Return Filing</a></li>
+              <li><a class="dropdown-item" href="#">ESI Registration</a></li>
+
+            </ul>
+            <ul>
+              <li><a class="dropdown-item" href="#"></a></li>
+              <li><a class="dropdown-item" href="#">Share Transfer</a></li>
+              <li><a class="dropdown-item" href="#">MOA Amendment</a></li>
+              <li><a class="dropdown-item" href="#">Winding Up of Company</a></li>
+              <li><a class="dropdown-item" href="#">Winding Up of LLP</a></li>
+
+            </ul>
+            <ul>
+              <li><a class="dropdown-item" href="#" style="color: black;">CORPORATE FILINGS</a></li>
+              <li><a class="dropdown-item" href="#">Registered Office Change</a></li>
+              <li><a class="dropdown-item" href="#">Add Directors</a></li>
+              <li><a class="dropdown-item" href="#">Remove Directors</a></li>
+              <li><a class="dropdown-item" href="#">Increase Authorized Capital</a></li>
+
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+            style="font-weight: 600; font-size: 15px; color: black; ">
+            DOCUMENTS
+          </a>
+          <div class="dropdown-menu" style="font-size: 14px;">
+            <ul>
+              <li><a class="dropdown-item" href="#" style="color: black;">REAL ESTATE</a></li>
+              <li><a class="dropdown-item" href="#">Lease Deed - Commercial Property</a></li>
+              <li><a class="dropdown-item" href="#">Notice to Vacate Tenant</a></li>
+              <li><a class="dropdown-item" href="#">Lease Deed - Residential Property</a></li>
+            </ul>
+            <ul>
+              <li><a class="dropdown-item" href="#" style="color: black;">CORPORATE</a></li>
+              <li><a class="dropdown-item" href="#">Partnership Deed</a></li>
+              <li><a class="dropdown-item" href="#">Section 138 Notice</a></li>
+              <li><a class="dropdown-item" href="#">Account Opening Resolution</a></li>
+            </ul>
+            <ul>
+              <li><a class="dropdown-item" href="#" style="color: black;">EMPLOYMENT</a></li>
+              <li><a class="dropdown-item" href="#">Offer Letter</a></li>
+              <li><a class="dropdown-item" href="#">Appointment Letter</a></li>
+              <li><a class="dropdown-item" href="#">Resignation Letter</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+            style="font-weight: 600; font-size: 15px; color: black;">
+            STARTUP
+          </a>
+          <div class="dropdown-menu" style="font-size: 14px;">
+            <ul>
+              <li><a class="dropdown-item" href="#" style="color: black;">REGISTRATIONS</a></li>
+              <li><a class="dropdown-item" href="#">Digital Signature</a></li>
+              <li><a class="dropdown-item" href="#">Udyam Registration</a></li>
+              <li><a class="dropdown-item" href="#">Import Export Code99</a></li>
+              <li><a class="dropdown-item" href="#">FSSAI Registration</a></li>
+              <li><a class="dropdown-item" href="">Trade License</a></li>
+              <li><a class="dropdown-item" href="">Professional Tax</a></li>
+            </ul>
+            <ul>
+              <li><a class="dropdown-item" href="#" style="color: black;">FOR INDIAN OWNERS</a></li>
+              <li><a class="dropdown-item" href="#">Proprietorship</a></li>
+              <li><a class="dropdown-item" href="#">Partnership</a></li>
+              <li><a class="dropdown-item" href="#">One Person Company</a></li>
+              <li><a class="dropdown-item" href="#">Limited Liability Partnership</a></li>
+              <li><a class="dropdown-item" href="#">Private Limited Company</a></li>
+              <li><a class="dropdown-item" href="#">Public Limited Company</a></li>
+
+            </ul>
+            <ul>
+              <li><a class="dropdown-item" href="#" style="color: black;">FOR FOREIGN OWNERS</a></li>
+              <li><a class="dropdown-item" href="#">Indian Subsidiary</a></li>
+              <li><a class="dropdown-item" href="#">USA Company Registration</a></li>
+            </ul>
+            <ul>
+              <li><a class="dropdown-item" href="#" style="color: black;">SPECIAL ENTITIES</a></li>
+              <li><a class="dropdown-item" href="#">Nidhi Company</a></li>
+              <li><a class="dropdown-item" href="#">Producer Company</a></li>
+              <li><a class="dropdown-item" href="#">Section 8 Company</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+            style="font-weight: 600; font-size: 15px; color: black;">
+            INTELLECTUALL PROPERTY
+          </a>
+          <div class="dropdown-menu" style="font-size: 14px;">
+            <ul>
+              <li><a class="dropdown-item" href="#" style="color: black;">Trademark</a></li>
+              <li><a class="dropdown-item" href="#">Trademark Registration</a></li>
+              <li><a class="dropdown-item" href="#">Trademark Objection</a></li>
+              <li><a class="dropdown-item" href="#">Trademark Opposition</a></li>
+              <li><a class="dropdown-item" href="#">Trademark Renewal</a></li>
+
+            </ul>
+            <ul>
+              <li><a class="dropdown-item" href="#" style="color: black;">Others</a></li>
+              <li><a class="dropdown-item" href="#">Copyright Registration</a></li>
+              <li><a class="dropdown-item" href="#">Design Registration</a></li>
+              <li><a class="dropdown-item" href="#">Provisional Patent</a></li>
+              <li><a class="dropdown-item" href="#">Patent Registration</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+            style="font-weight: 600; font-size: 15px; color: black;">
+            GOOD & SERVICES TAX
+          </a>
+          <div class="dropdown-menu" style="font-size: 14px;">
+            <ul>
+              <li><a class="dropdown-item" href="#" style="color: black;">GST Tools</a></li>
+              <li><a class="dropdown-item" href="#">Tally Software for Business</a></li>
+              <li><a class="dropdown-item" href="#">GST Return Filing</a></li>
+              <li><a class="dropdown-item" href="#">eWay Bill</a></li>
+              <li><a class="dropdown-item" href="#">Input Tax Credit</a></li>
+              <li><a class="dropdown-item" href="#">GSTIN Verification</a></li>
+              <li><a class="dropdown-item" href="#">GST Registration Cancellation</a></li>
+            </ul>
+            <ul>
+              <li><a class="dropdown-item" href="#" style="color: black;">GST Services</a></li>
+              <li><a class="dropdown-item" href="#">GST Registration</a></li>
+              <li><a class="dropdown-item" href="#">GST Invoicing</a></li>
+              <li><a class="dropdown-item" href="#">GST Annual Return</a></li>
+              <li><a class="dropdown-item" href="#">GST LUT Filing</a></li>
+              <li><a class="dropdown-item" href="#">Temporary GST Registration</a></li>
+              <li><a class="dropdown-item" href="#">GST Registration for Foreigners</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- nav 2 -->
+<nav class="flex items-center justify-around bg-black  top-0 z-50">
+
+
+</nav>

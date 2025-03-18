@@ -1,0 +1,96 @@
+<%- include("./includes/header.ejs") %>
+    <%- include("./includes/Navbar.ejs") %>
+
+        <div class="w-[50%] absolute top-[20%] left-[30%] ">
+            <%- include("./includes/flash.ejs") %>
+        </div>
+
+
+
+
+        <!-- Contact Section -->
+        <section class="py-12 bg-white bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <!-- Contact Info -->
+                    <div>
+                        <h2 class="text-3xl font-bold text-dark-600">Contact Us</h2>
+                        <p class="mt-4 text-dark-600">
+                            At <strong>BLS AND CO</strong>, we’re here to provide personalized financial solutions
+                            and
+                            expert
+                            advice. Whether you need assistance with tax planning, accounting, or financial
+                            consulting,
+                            our
+                            team is just a call or message away.
+                        </p>
+                        <ul class="mt-6 space-y-4">
+                            <li class="flex items-center space-x-3">
+                                <i class="fas fa-phone-alt text-grey-900"></i>
+                                <span>Phone:</span>
+                                <a href="tel:+91-9784343068" class="text-grey-900 hover:underline"
+                                    style="color: white; text-decoration: none;">+91-9784343068</a>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <i class="fas fa-paper-plane text-grey-900"></i>
+                                <span>Email:</span>
+                                <a href="mailto:cabhanwarlalsaini@gmail.com" class="text-grey-900 hover:underline"
+                                    style="color: white; text-decoration: none;">
+                                    cabhanwarlalsaini@gmail.com
+                                </a>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <i class="fas fa-globe text-grey-900"></i>
+                                <span>Website:</span>
+                                <a href="http://www.blsandco.com" target="_blank" class="text-grey-900 hover:underline"
+                                    style="color: white; text-decoration: none;">
+                                    WWW.BLS AND CO.COM
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="mt-6 flex space-x-4">
+                            <a href="#" class="text-grey-900 hover:text-blue-800">
+                                <i class="fab fa-facebook fa-2x" style="color: white;"></i>
+                            </a>
+                            <a href="#" class="text-grey-900 hover:text-blue-800">
+                                <i class="fab fa-twitter fa-2x" style="color: white;"></i>
+                            </a>
+                            <a href="#" class="text-white-900 hover:text-blue-800">
+                                <i class="fab fa-linkedin-in fa-2x" style="color: white;"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="bg-gray-100 p-8 shadow-lg rounded-lg">
+                        <h2 class="text-2xl font-bold text-gray-800">Send Us a Message</h2>
+                        <form action="/contact" method="POST" class="mt-6 space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <input type="text" name="firstName" placeholder="First Name"
+                                    class="border border-gray-300 p-3 rounded-md focus:outline-none focus:ring focus:ring-blue-500">
+                                <input type="text" name="lastName" placeholder="Last Name"
+                                    class="border border-gray-300 p-3 rounded-md focus:outline-none focus:ring focus:ring-blue-500">
+                            </div>
+                            <input type="email" name="email" placeholder="Email"
+                                class="w-full border border-gray-300 p-3 rounded-md focus:outline-none focus:ring focus:ring-blue-500">
+                            <input type="tel" name="phone" placeholder="Phone"
+                                class="w-full border border-gray-300 p-3 rounded-md focus:outline-none focus:ring focus:ring-blue-500">
+                            <textarea name="message" rows="4" placeholder="Write your message"
+                                class="w-full border border-gray-300 p-3 rounded-md focus:outline-none focus:ring focus:ring-blue-500"></textarea>
+                            <button type="submit"
+                                class="py-2 px-10  bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr style="color: red;">
+
+
+        <%- include("./includes/footer.ejs") %>
+            </body>
+
+            </html>

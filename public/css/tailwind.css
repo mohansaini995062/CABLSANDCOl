@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-color: black;
+}
+
+#mobile_nav {
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+
+    position: fixed;
+    top: 0px;
+    left: 0px;
+
+    padding: 10px;
+
+    /* transform: translateX(-500px); */
+    display: none;
+}

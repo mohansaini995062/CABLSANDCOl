@@ -1,0 +1,46 @@
+<%- include('../../includes/header.ejs') %>
+  <%- include('../../includes/Navbar.ejs') %>
+
+    <body class="bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500">
+      <div class="w-[50%] absolute top-[20%] left-[30%]">
+        <%- include("../../includes/flash.ejs") %>
+      </div>
+
+      <div class="container mx-auto mt-10">
+        <div class="bg-white shadow-md rounded-lg p-6">
+          <div class="flex items-center justify-around">
+            <!-- Profile Details -->
+            <div class="flex items-center">
+              <div
+                class="w-16 h-16 bg-blue-500 text-white rounded-full flex items-center justify-center text-2xl font-bold">
+                <img src="<%= user?.profile?.url %>" alt="">
+              </div>
+              <div class="ml-4">
+                <h2 class="text-2xl font-semibold"><span class="text-gray-700">
+                    <%= user.username%>
+                  </span></h2>
+                <p class="text-lg text-gray-600"><span class="text-gray-700">
+                    <%= user.email %>
+                  </span></p>
+              </div>
+            </div>
+            <!-- Edit Profile Icon -->
+            <div class="flex items-center space-x-4">
+              <a href="/user/edit-profile" class="text-blue-500 hover:text-blue-700">
+                <i class="fas fa-edit text-2xl"></i>
+              </a>
+              <!-- Logout Button -->
+              <form action="/user/logout" method="POST" class="inline">
+                <button type="submit"
+                  class="inline-block mr-10 bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 px-5 py-2 text-white font-bold text-xl hover:bg-orange-300 transition-all duration-500 rounded-3xl text-decoration-none">
+                  Logout
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <%- include('../../includes/footer.ejs') %>
+    </body>
+
+    </html>

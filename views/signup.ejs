@@ -1,0 +1,121 @@
+<%- include("./includes/header.ejs") %>
+    <%- include("./includes/Navbar.ejs") %>
+
+
+        <div class="w-[50%] absolute top-[20%] left-[30%] ">
+            <%- include("./includes/flash.ejs") %>
+        </div>
+        <div class="bg-gray-100 flex items-center justify-center h-screen  bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"">
+    <div class=" bg-white p-8 rounded-lg shadow-lg w-96 ">
+        <h2 class=" text-2xl font-bold text-center mb-6" style="color: black;">Sign Up</h2>
+
+            <form id="signupForm" action="/user/signup" method="POST" onsubmit="return validateForm(event)">
+                <!-- Username -->
+                <div class="mb-4">
+                    <label for="username" class="block text-gray-700">Username</label>
+                    <input type="text" id="username" name="username"
+                        class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        placeholder="Enter your username">
+                    <p id="usernameError" class="text-red-500 text-sm hidden">Username is required.</p>
+                </div>
+
+                <!-- Email -->
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-700">Email</label>
+                    <input type="email" id="email" name="email"
+                        class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        placeholder="Enter your email">
+                    <p id="emailError" class="text-red-500 text-sm hidden">Please enter a valid email address.</p>
+                </div>
+
+                <!-- Password -->
+                <div class="mb-4">
+                    <label for="password" class="block text-gray-700">Password</label>
+                    <input type="password" id="password" name="password"
+                        class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        placeholder="Enter your password">
+                    <p id="passwordError" class="text-red-500 text-sm hidden">Password is required and should be at
+                        least 6 characters long.</p>
+                </div>
+
+                <!-- Terms Checkbox -->
+                <div class="mb-4">
+                    <div class="flex items-center">
+                        <input type="checkbox" id="terms" name="terms"
+                            class="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-2 focus:ring-blue-500"
+                            value="true">
+                        <label for="terms" class="ml-2 text-gray-700">I accept the <a href="#"
+                                class="text-blue-600">terms and conditions</a></label>
+
+                    </div>
+                    <p id="termsError" class="text-red-500 text-sm hidden">You must accept the terms and conditions.</p>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="flex justify-center">
+                    <button type="submit"
+                        class="w-full py-2  bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">Sign
+                        Up</button>
+                </div>
+            </form>
+        </div>
+        </div>
+        <hr>
+
+        <%- include("./includes/footer.ejs") %>
+
+
+            <script>
+                function validateForm(event) {
+                    event.preventDefault();
+
+                    let isValid = true;
+
+                    // Clear previous error messages
+                    document.getElementById('usernameError').classList.add('hidden');
+                    document.getElementById('emailError').classList.add('hidden');
+                    document.getElementById('passwordError').classList.add('hidden');
+                    document.getElementById('termsError').classList.add('hidden');
+
+                    // Username Validation
+                    const username = document.getElementById('username').value;
+                    if (username.trim() === "") {
+                        document.getElementById('usernameError').classList.remove('hidden');
+                        isValid = false;
+                    }
+
+                    // Email Validation
+                    const email = document.getElementById('email').value;
+                    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                    if (!emailPattern.test(email)) {
+                        document.getElementById('emailError').classList.remove('hidden');
+                        isValid = false;
+                    }
+
+                    // Password Validation
+                    const password = document.getElementById('password').value;
+                    if (password.length < 6) {
+                        document.getElementById('passwordError').classList.remove('hidden');
+                        isValid = false;
+                    }
+
+                    // Terms Checkbox Validation
+                    const terms = document.getElementById('terms').checked;
+                    if (!terms) {
+                        document.getElementById('termsError').classList.remove('hidden');
+                        document.getElementById('termsError').setAttribute("name", "false")
+                        isValid = false;
+                    }
+
+                    // If form is valid, submit the form
+                    if (isValid) {
+                        alert('Form Submitted!');
+                        // You can submit the form here with JavaScript or let the form handle it
+                        document.getElementById('signupForm').submit();
+                    }
+                }
+            </script>
+
+            </body>
+
+            </html>
